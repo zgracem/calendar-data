@@ -1,7 +1,7 @@
-/* vim:ft=calendar
- *
+/*
  * Birthdays
  * Maintained by ZGM
+ * vim:ft=calendar
  *
  * Modified from FreeBSD version:
    - Reduced length of some entries to avoid line wrapping past 80 characters

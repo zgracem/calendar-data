@@ -1,7 +1,7 @@
-/* vim:ft=calendar
- *
+/*
  * World holidays
  * Maintained by ZGM
+ * vim:ft=calendar
  *
  * Modified from FreeBSD version:
    - Removed Canadian holidays (use `calendar.canada` instead)

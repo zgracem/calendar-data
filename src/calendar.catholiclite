@@ -1,7 +1,7 @@
-/* vim:ft=calendar
- *
+/*
  * Major Roman Catholic holy days
  * Maintained by ZGM
+ * vim:ft=calendar
  *
  * Mostly derived from <https://en.wikipedia.org/wiki/General_Roman_Calendar>
  */

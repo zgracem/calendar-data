@@ -1,15 +1,5 @@
 // vim:ft=calendar
 
-// If no file `calendar` exists in the current directory, calendar(1) checks for
-// `~/.calendar/calendar`, which can be used to include files from arbitrary
-// locations.
-//
-// The search path for data files (when installed from Homebrew) is:
-//   $CALENDAR_DIR (if set)
-//   $HOME/.calendar
-//   $HOMEBREW_PREFIX/etc/calendar
-//   $HOMEBREW_PREFIX/opt/calendar/share/calendar
-
 /* mine */
 #include <calendar.catholic>
 #include <calendar.canada>

@@ -1,10 +1,10 @@
-/* vim:ft=calendar
- *
+/*
  * Canadian holidays (English)
  * Maintained by ZGM
+ * vim:ft=calendar
  *
- * Based on calendar.usholiday
- * To be used w/ a modified calendar.holiday
+ * Based on <calendar.usholiday>
+ * To be used w/ <calendar.zholiday>
  */
 
 #ifndef _calendar_canada_

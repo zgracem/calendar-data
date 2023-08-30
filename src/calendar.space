@@ -1,9 +1,9 @@
-/* vim:ft=calendar
- *
+/*
  * History of space exploration
  * Maintained by ZGM
+ * vim:ft=calendar
  *
- * Incorporates OpenBSD's calendar.space
+ * Incorporates OpenBSD's <calendar.space>
  * with additional dates from Wikipedia
  */
 

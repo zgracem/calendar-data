@@ -1,7 +1,7 @@
-/* vim:ft=calendar
- *
+/*
  * Roman Catholic holy days with variable dates, 2023-2029
  * Maintained by ZGM
+ * vim:ft=calendar
  */
 
 #ifndef _calendar_catholic_more_
