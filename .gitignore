@@ -1,0 +1,18 @@
+.gitattributes
+bin/
+etc/
+lib/*
+!lib/catholic_cal.rb
+src/calendar
+
+# dist
+*.zip
+
+# patching
+bin/rebuild_patches.fish
+*.patch
+
+# config files
+.*.yml
+.vscode/
+*.code-workspace
