@@ -1,0 +1,110 @@
+/* vim:ft=calendar
+ *
+ * Important historical women
+ * Maintained by ZGM
+ *
+ * Source: Wikipedia
+ */
+
+#ifndef _calendar_women_
+#define _calendar_women_
+
+LANG=utf-8
+
+01/01	Grace Hopper died, 1992, inventor of high-level programming languages
+01/01	Shirley Chisholm died, 2005, first Black woman elected to U.S. Congress
+01/06	Ida Tarbell died, 1944, American journalist
+01/07	Zora Neale Hurston born, 1891
+01/14	Anaïs Nin died, 1977
+01/19	Hedy Lamarr died, 2000, actress and inventor
+01/22	Ursula K. Le Guin died, 2018
+01/26	Angela Davis born, 1944
+01/27	Nellie Bly died, 1922
+01/28	Zora Neale Hurston died, 1960
+02/01	Mary Wollstonecraft Shelley died, 1851
+02/01	Wisława Szymborska died, 2012
+02/09	Alice Walker born, 1944, first Black woman to win Pulitzer for Fiction
+02/18	Toni Morrison born, 1931
+02/21	Anaïs Nin born, 1903
+02/24	Judith Butler born, 1956
+02/24	Katherine G. Johnson died, 2020, NASA mathematician
+02/24	Octavia Butler died, 2006
+02/27	Elizabeth Taylor born, 1932
+03/06	Louisa May Alcott died, 1888
+03/10	Harriet Tubman died, 1913
+03/17	Irène Joliot-Curie died, 1956
+03/23	Elizabeth Taylor died, 2011
+03/25	Ida B. Wells died, 1931
+03/31	Charlotte Brontë died, 1855
+04/01	Sophie Germain born, 1776, French mathematician and physicist
+04/03	Jane Goodall born, 1934
+04/04	Maya Angelou born, 1928
+04/07	Billie Holiday born, 1915
+04/12	Clara Barton died, 1912, founder of the American Red Cross
+04/16	Rosalind Franklin died, 1958
+04/21	Charlotte Brontë born, 1816
+04/22	Louise Glück born, 1943
+04/25	Ella Fitzgerald born, 1917
+04/26	Lucille Ball died, 1989
+05/05	Nellie Bly born, 1864
+05/06	Maria Montessori died, 1952
+05/07	Olympe de Gouges born, 1748, revolutionary women's rights activist
+05/12	Katharine Hepburn born, 1907
+05/26	Sally Ride born, 1951
+05/28	Maya Angelou died, 2014
+06/01	Helen Keller died, 1968
+06/07	Dorothy Parker died, 1967
+06/12	Harriet Martineau born, 1802, first female sociologist
+06/14	Emmeline Pankhurst died, 1928, English suffragist
+06/15	Ella Fitzgerald died, 1996
+06/16	Andrea M. Ghez born, 1965, Nobel laureate in Physics
+06/22	Octavia Butler born, 1947
+06/27	Harriet Martineau died, 1876, first female sociologist
+06/27	Helen Keller born, 1880
+06/27	Sophie Germain died, 1831, French mathematician and physicist
+06/29	Katharine Hepburn died, 2003
+07/02	Wisława Szymborska born, 1923
+07/04	Marie Curie died, 1934
+07/06	Frida Kahlo born, 1907
+07/12	Malala Yousafzai born, 1997
+07/13	Frida Kahlo died, 1954
+07/15	Emmeline Pankhurst born, 1858, English suffragist
+07/16	Ida B. Wells born, 1862
+07/17	Billie Holiday died, 1959
+07/18	Jane Austen died, 1817
+07/23	Sally Ride died, 2012
+07/24	Amelia Earhart born, 1897
+07/24	Mary Church Terrell died, 1954
+07/25	Rosalind Franklin born, 1920
+08/01	Mother Jones baptized (DOB unknown), 1837
+08/05	Toni Morrison died, 2019
+08/06	Lucille Ball born, 1911
+08/13	Julia Child died, 2004
+08/15	Julia Child born, 1912
+08/22	Dorothy Parker born, 1893
+08/26	Katherine G. Johnson born, 1918, NASA mathematician
+08/30	Mary Wollstonecraft Shelley born, 1797
+08/31	Maria Montessori born, 1870
+09/06	Margaret Sanger died, 1966
+09/12	Irène Joliot-Curie born, 1897
+09/14	Margaret Sanger born, 1879
+09/17	St. Hildegard of Bingen died, 1179
+10/17	Mae Jemison born, 1956, first African-American woman astronaut
+10/21	Ursula K. Le Guin born, 1929
+10/31	Indira Gandhi died, 1984
+11/03	Olympe de Gouges died, 1793, revolutionary women's rights activist
+11/05	Ida Tarbell born, 1857, American journalist
+11/07	Marie Curie born, 1867
+11/09	Hedy Lamarr born, 1914, actress and inventor
+11/19	Indira Gandhi born, 1917
+11/26	Sojourner Truth died, 1883
+11/27	Ada Lovelace died, 1852, born Augusta Ada Byron
+11/29	Louisa May Alcott born, 1832
+11/30	Mother Jones died, 1930
+11/30	Shirley Chisholm born, 1924, first Black woman elected to U.S. Congress
+12/09	Grace Hopper born, 1906, inventor of high-level programming languages
+12/10	Ada Lovelace born, 1815, born Augusta Ada Byron
+12/16	Jane Austen born, 1775
+12/25	Clara Barton born, 1821, founder of the American Red Cross
+
+#endif /* !_calendar_women_ */

@@ -1,0 +1,758 @@
+/* vim:ft=calendar
+ *
+ * World holidays
+ * Maintained by ZGM
+ *
+ * Modified from FreeBSD version:
+   - Removed Canadian holidays (use `calendar.canada` instead)
+   - Added USA-, UK-, and Australia-specific holidays (so `calendar.usholiday`,
+     `calendar.uk`, `calendar.australia` are now redundant)
+   - Converted movable days (like "06/03*") to rules ("06/MonFirst")
+   - Removed redundant text like "(3rd Monday)"
+   - Removed events which can't be parsed by calendar(1), e.g. with
+     non-Gregorian, lunar/lunisolar, or complex dates
+   - Removed vague, duplicated, incorrect and/or irrelevant entries
+   - Various fixes to spelling, formatting, and consistency
+   - Includes changes from OpenBSD version 2016/01/28 09:52:43
+   - Includes changes from Debian's `bsdmainutils` package
+   - Additions from Wikipedia (see end of file)
+ */
+
+#ifndef _calendar_holiday_
+#define _calendar_holiday_
+
+LANG=utf-8
+
+01/01	Japanese New Year festival (正月) begins
+01/01	Independence Day in Haiti, Sudan
+01/01	Universal Fraternity Day in Mozambique
+01/02	Ancestry Day in Haiti
+01/02	St. Berchtold's Day in Switzerland
+01/03	Revolution Day in Upper Volta
+01/04	Independence Day in Burma
+01/04	Martyrs' Day in Zaire
+01/06	Children's Day in Uruguay
+01/06	Three Kings' Day in Puerto Rico
+01/07	Christmas in Ethiopia
+01/07	Pioneer's Day in Liberia
+01/09	Day of the Martyrs in Panama
+01/11	Armed Forces Day in Liberia
+01/12	Zanzibar Revolution Day in Tanzania
+01/13	National Liberation Day in Togo
+01/SunSecond	Coming of Age Day (成人の日) in Japan
+01/15	Arbor Day in Jordan
+01/16	Martyrs' Day in Benin
+01/18	Revolution Day in Tunisia
+01/19	Ethiopian Epiphany in Ethiopia
+01/19	Nameday of Archbishop Makarios in Cyprus
+01/20	Army Day in Mali
+01/20	National Heroes Day in Guinea-Bissau
+01/21	Our Lady of Altagracia in Dominican Republic
+01/23	Feast of St. Ildefonsus
+01/23	National Handwriting Day in USA
+01/24	Economic Liberation Day in Togo
+01/26	Republic Day in India
+01/MonThird	Martin Luther King Jr. Day in USA
+01/26	Australia Day
+02/02	Candlemas
+02/04	Independence Commemoration Day in Sri Lanka
+02/05	Constitution Day in Mexico
+02/06	New Zealand Day
+02/07	Independence Day in Grenada
+02/08	Prešeren Day (Cultural Holiday) in Slovenia
+02/09	St. Maron's Day in Lebanon
+02/10	Feast of St. Paul's Shipwreck, AD 60
+02/11	National Foundation Day (建国記念の日) in Japan
+02/12	Pyidaungsa Day in Burma
+02/18	Democracy Day in Nepal
+02/18	Independence Day in The Gambia
+02/23	Republic Day in Guyana
+02/24	Gregorian Calendar Day
+02/25	National Day in Kuwait
+02/27	Independence Day in Dominican Republic
+02/MonThird	President's Day in USA
+Feb/MonSecond	Royal Hobart Regatta Day in Tasmania
+Feb/WedLast	Launceston Cup in Tasmania
+Mar/MonFirst	Labour Day in Western Australia
+Mar/TueFirst	King Island Show in Tasmania
+Mar/MonSecond	Labour Day in Victoria
+Mar/MonSecond	Eight Hours Day in Tasmania
+Mar/MonSecond	Canberra Day
+03/01	Independence Movement Day in South Korea
+03/01	St. David's Day, patron saint of Wales
+03/02	Peasants Day in Burma
+03/02	Texas Independence day
+03/02	Victory of Adowa in Ethiopia
+03/03	Girls' Day (雛祭り) in Japan
+03/03	Throne Day in Morocco
+03/04	Vermont Admission Day, 1791
+03/05	Independence Day in Equatorial Guinea
+03/05	Mother-in-Law Day in USA
+03/06	Lantern Day, Beijing
+03/08	First Annual International Women's Day, 1909
+03/08	International Women's Day in former USSR
+03/08	Syrian National Day in Libyan Arab Republic
+03/08	Women's Day in Guinea-Bissau, Taiwan and Yemen Democratic Republic
+03/08	Youth Day in Zambia
+03/09	Decoration Day in Liberia
+03/09	Falgun Purnima Day in Nepal
+03/10	Labor Day in South Korea
+03/11	Johnny Appleseed Day; anniversary of the death of John Chapman
+03/12	Commonwealth Day in Swaziland
+03/12	Independence Day in Mauritius
+03/12	Moshoeshoe's Birthday in Lesotho
+03/12	Renovation Day in Gabon
+03/13	National Day in Grenada
+03/15	Day of the 1848 revolution in Hungary
+03/16	Black Press Day; first US Black newspaper founded, 1827
+03/17	Evacuation Day in Suffolk County, Massachusetts
+03/17	St. Patrick's Day, patron saint of Ireland
+03/19	St. Joseph's Day in Colombia, Costa Rica, Holy See, Liechtenstein,
+	Bavaria, San Marino, Spain, Venezuela
+03/19	Tree Planting Day in Lesotho
+03/20	Independence Day in Tunisia
+03/20	Youth Day in Oklahoma
+03/21	Afghan New Year in Afghanistan
+03/21	Juarez' Birthday in Mexico
+03/22	Abolition Day in Puerto Rico
+03/23	Pakistan Day in Pakistan
+03/25	Greek Independence Day in Cyprus
+03/25	Lady Day (a.k.a. the Feast of the Annunciation)
+03/25	Maryland Day in Maryland
+03/25	National Holiday in Greece
+03/MonLast	Seward's Day in Alaska
+03/26	Independence Day in Bangladesh
+03/26	Prince Jonah Kuhio Kalanianaole Day in Hawaii
+03/27	Armed Forces Day in Burma
+03/29	Death of President Barthelemy Boganda in Central African Republic, 1959
+03/29	Memorial Day in Madagascar
+03/31	National Day in Malta
+04/01	Youth Day in Benin
+04/02	Malvinas Day in Argentina
+04/02	Pascua Florida Day in Florida
+04/04	Ching Ming Festival in Hong Kong
+04/04	Liberation Day in Hungary
+04/04	National Day in Senegal
+04/05	Arbor Day in South Korea
+04/05	Tomb Sweeping Day in Taiwan
+04/06	Chakri Memorial Day in Thailand
+04/06	Victory Day in Ethiopia
+04/08	Fast and Prayer Day in Liberia
+04/09	Martyrs' Day in Tunisia
+04/11	National Heroes Day in Costa Rica
+04/13	National Day in Chad
+04/13*	Songkran Day in Thailand
+04/14	Day of the Americas in Honduras
+04/15	Bengali New Year in Bangladesh
+04/15	Income Tax Day in USA
+04/MonThird	Patriot's Day in Maine & Massachusetts
+04/16	De Diego's Birthday celebrated in Puerto Rico
+04/16	Holy Week (5 days) in Venezuela
+04/16	Tourist Week (5 days) in Uruguay
+04/17	Burmese New Year in Burma
+04/18	Independence Day in Chile, Zimbabwe
+04/19	Declaration of Independence in Venezuela
+04/19	Republic Day in Sierra Leone
+04/21	San Jacinto Day in Texas
+04/21	Tiradentes in Brazil
+04/22	Arbor Day in Nebraska & Delaware
+04/22	Oklahoma Day in Oklahoma
+04/23	St. George's Day, patron saint of England
+04/24	Victory Day in Togo
+04/25	Anniversary of the Revolution in Portugal
+04/25	Anzac Day in Australia, New Zealand, et al.
+04/25	Liberation Day in Italy
+04/25	National Flag Day in Swaziland
+04/26	Union Day in Tanzania
+04/27	Day of Uprising Against Occupation in Slovenia
+04/27	Independence Day in Togo
+04/27	Koningsdag (King's Birthday) in the Netherlands
+04/29	Shōwa Day (昭和の日) in Japan
+04/30	The Workers Day in Uruguay
+Easter-21	Mothering Sunday in UK
+Easter+7	Family Day in South Africa
+05/MonFirst	Labour Day in Northern Territory (Australia)
+05/01	Labor Day in many places in the USA
+05/01	May Day
+05/01	US Law Day (decl. by Eisenhower)
+05/02	King's Birthday in Lesotho
+05/03	Constitution Memorial Day (憲法記念日) in Japan
+05/04	Coronation Day in Thailand
+05/05	Greenery Day (みどりの日) in Japan
+05/04	Rhode Island Independence Day
+05/05	Battle of Puebla in Mexico
+05/05	Children's Day (こどもの日) in Japan
+05/05	Liberation Day in the Netherlands
+05/06	Bataan Day in Philippines
+05/MonFirst	Bank Holiday in UK
+May/MonFirst	May Day in Northern Territory (Australia)
+05/07	May Day in United Kingdom
+05/08	Buddha's Birthday in South Korea
+05/08	Elections for the National Assembly in Philippines
+05/08	Truman Day in Missouri
+05/09	V-E Day (Victory in Europe), end of World War II
+05/10	Mother's Day in Guatemala
+05/11	Minnesota Day in Minnesota
+05/14	Anniversary of the Founding of Guinean Democratic Party in Guinea
+05/14	Independence Day (2 days) in Paraguay
+05/14	Unification Day in Liberia
+05/15	Kamuzu Day in Malawi
+05/16	Discovery Day in Cayman Islands
+05/17	Constitution Day in Nauru, Norway
+05/18	Flag Day in Haiti
+05/18	Prayer Day in Denmark
+05/19	Youth and Sports Day in Turkey
+05/20	Mecklenburg Independence Day in North Carolina
+05/20	National Day in Cameroon
+05/21	Independence Day in Montenegro
+05/22	National Heroes Day in Sri Lanka
+05/23	Commonwealth Day in Jamaica, Belize
+05/23	National Labor Day in Jamaica
+05/24	Bermuda Day in Bermuda
+05/24	Day of Slav Letters in Bulgaria
+05/25	African Freedom Day in Zimbabwe
+05/25	African Liberation Day in Chad, Mauritania, Zambia
+05/25	Anniversary of the Revolution of 1810 in Argentina
+05/25	Independence Day in Jordan
+05/25	Memorial Day in New Mexico & Puerto Rico
+05/25	Revolution in the Sudan in Libyan Arab Republic
+05/27	Afghanistan attains sovereignty, 1921
+05/MonLast	Bank Holiday in UK
+05/SunSecond	Mother's Day in Central African Republic
+May/MonThird	Adelaide Cup in South Australia
+05/SatThird	Armed Forces Day in USA
+05/SunLast	Día del Arbol in Venezuela
+05/MonLast	Memorial Day in USA
+05/31	Republic Day in South Africa
+05/MonThird	Memorial Day in Michigan
+06/01	Independence Days (3 days) in Western Samoa
+06/01	Madaraka Day in Kenya
+06/01	Victory Day in Tunisia
+06/02	Corpus Christi in Paraguay
+06/03	Labor Day in Bahamas
+06/MonFirst	Bank Holiday in Republic of Ireland
+Jun/MonFirst	Foundation Day in Western Australia
+06/04	Emancipation Day in Tonga
+06/04	Queen's Birthday in New Zealand
+06/05	Constitution Day in Denmark
+06/05	Liberation Day in Seychelles
+06/06	His Majesty, Yang Di-Pertuan Agong's Birthday in Malaysia
+06/06	Memorial Day in South Korea
+06/06	National Day in Sweden
+06/09	Senior Citizen's Day in Oklahoma
+06/10	Camoes Day in Portugal
+06/11	King Kamehameha I Day in Hawaii
+06/11	Queen's Birthday
+06/12	Independence Day in Philippines
+06/12	Peace with Bolivia in Paraguay
+06/13	Corrective Movement in Yemen Arab Republic
+06/14	Flag Day in USA
+06/16	Bloomsday - Anniversary of Dublin events, 1904, in "Ulysses"
+06/17	Bunker Hill Day in Suffolk County, Massachusetts
+06/17	Independence Day in Iceland
+06/17	National Day in Federal Republic of Germany
+06/18	Evacuation Day in Egypt
+06/18	Queen's Birthday in Fiji
+06/19	Artigas's Birthday in Uruguay
+06/19	Juneteenth (Emancipation Day) in USA
+06/19	Labor Day in Trinidad and Tobago
+06/19	Revolution Day in Algeria
+06/20	Flag Day in Argentina
+06/20	West Virginia Day in West Virginia
+06/22	Corrective Movement in Yemen Democratic Republic
+06/22	Midsummer Eve in Finland, Sweden
+06/22	National Sovereignty Day in Haiti
+06/23	National Holiday in Luxembourg
+06/24	Battle of Carabobob in Venezuela
+06/24	Fisherman's Day in Madagascar, Mozambique, Somalia
+06/24	Kings Day in Spain
+06/24	Peasants Day in Peru
+06/25	National Day in Slovenia
+06/29	Independence Day in Seychelles
+06/30	Day of the Army in Guatemala
+07/01	Freedom Day in Suriname
+07/01	Independence Day in Burundi
+07/01	National Day in Rwanda
+07/01	Republic Day in Ghana
+07/01	Union of the Somalia Republic in Somalia
+07/02	National Day in Kiribati
+07/04	Caribbean Day in Guyana
+07/04	Constitution Day in Cayman Islands
+07/04	Family Day in Lesotho
+07/04	Heroes Day in Zambia
+07/04	Independence Day in USA
+07/04	Kadooment Day in Barbados
+07/04	Philippine-American Friendship Day in the Philippines
+07/04	Warriors Day (2 days) in Yugoslavia
+07/05	Day of Peace and Unity in Rwanda
+07/05	Independence Day in Algeria, Venezuela
+07/07	Anniversary of the P.U.N. in Equatorial Guinea
+07/07	National Day in Malawi
+07/07	Saba Saba Day in Tanzania
+07/07	Star Festival (星祭り) begins in Japan
+07/09	Independence Day in Argentina
+07/10	Independence Day in Bahamas
+07/11	National Holiday in the Mongolian People's Republic
+07/11	Eleventh Night in Northern Ireland
+07/12	Battle of Boyne celebrated in Northern Ireland
+07/13	Statehood Day in Montenegro
+07/14	Anniversary of the Revolution in Iraq
+07/14	Bastille Day
+07/14	National Holiday in Monaco
+07/15	St. Swithin's Day
+07/16	Presidents Day in Botswana
+07/17	Constitution Day in South Korea
+07/17	July Revolution in Iraq
+07/17	Munoz Rivera's Birthday (celebrated in Puerto Rico)
+07/17	Public Holiday in Botswana
+07/18	Constitution Day in Uruguay
+07/18	Liberation Day in Nicaragua
+07/19	Martyrs' Day in Burma
+07/20	Independence Day in Colombia
+07/21	National Holiday in Belgium
+07/22	King's Birthday in Swaziland
+07/22	National Day in Poland
+07/23	Anniversary of the Revolution in Egypt
+07/23	Egyptian National Day in Syrian Arab Republic
+07/23	Remembrance Day in Papua New Guinea
+07/24	Pioneer Day in Utah
+07/24	Simon Bolivar's Day in Ecuador, Venezuela
+07/25	Constitution Day in Puerto Rico
+07/25	National Rebellion Day (3 days) in Cuba
+07/25	Republic Day in Tunisia
+07/25	St. James Day, patron saint of Spain
+07/25	Founding of Guayaquil in Ecuador
+07/26	Independence Day in Liberia
+07/26	National Day in Maldives
+07/27	Barbosa's Birthday (celebrated in Puerto Rico)
+07/28	Independence Days (2 days) in Peru
+07/28	King's Birthday in Thailand
+07/29	Olsok Eve in Norway, to commemorate Norway's Viking King St. Olav
+07/29	Rain Day in Waynesburg, PA
+07/31	Revolution Day in Republic of Congo
+07/MonFirst	Heroes' Day in Zambia
+07/TueFirst	Unity Day in Zambia
+07/MonThird	Marine Day (海の日) in Japan
+08/01	Discovery Day in Trinidad and Tobago
+08/01	Emancipation Day in Granada
+08/01	Freedom Day in Guyana
+08/01	National Day in Switzerland
+08/01	National Holidays (5 days) in El Salvador
+08/01	Parent's Day in Zaire
+08/02	Our Lady of Los Angeles in Costa Rica
+08/03	Independence Day in Jamaica, Niger
+08/03	Massacre of the Pidjiguiti in Guinea-Bissau
+08/03	Memorial Day of Archbishop Makarios in Cyprus
+08/04	Freedom Day in Guyana
+08/MonFirst	Bank Holiday in Fiji, Iceland
+08/MonFirst	Bank Holiday in Scotland and Northern Ireland
+Aug/MonFirst	Bank Holiday in New South Wales
+Aug/MonFirst	Picnic Day in Northern Territory (Australia)
+08/06	Emancipation Day in Bahamas
+08/06	Independence Day in Bolivia
+08/07	Battle of Boyaca in Colombia
+08/09	National Day in Singapore
+08/10	Independence Day in Ecuador
+08/MonSecond	Heroes' Day in Zimbabwe
+08/11	Independence Day in Chad
+08/11	King Hussein's Accession to the Throne in Jordan
+08/11	Mountain Day (山の日) in Japan
+08/12	Queen Sirikit's Birthday and Mother's Day in Thailand
+08/13	Proclamation of Independence in Central African Republic
+08/13	Women's Day in Tunisia
+08/14	Independence Day in Pakistan
+08/14	Waddi Dhahab in Morocco
+08/15	V-J Day (Victory over Japan), end of World War II
+08/15	Founding of Asuncion in Paraguay
+08/15	Independence Day in India
+08/15	Liberation Day in South Korea
+08/15	National Day in Republic of Congo
+08/15	Santa Maria in Malta
+08/FriThird	Admission Day in Hawaii, 1959
+08/16	Bennington Battle Day in Vermont
+08/16	Independence Days (3 days) in Gabon
+08/16	Restoration Day in Dominican Republic
+08/17	Anniversary of the Death of General San Martin in Argentina
+08/17	Independence Day in Indonesia
+08/19	Independence Day in Afghanistan
+08/20	Constitution Day in Hungary and birthday of King St. Istvan
+08/23	National Space Day in India
+08/24	National Flag Day in Liberia
+08/25	Constitution Day in Paraguay
+08/25	Independence Day in Uruguay
+08/26	Susan B. Anthony Day in Massachusetts
+08/MonLast	Bank Holiday in Isle of Man, Northern Ireland, England, Wales
+08/MonLast	Liberation Day in Hong Kong
+08/28	Heroes Day in Philippines
+08/30	Huey P. Long Day in Louisiana
+08/30	Victory Day in Turkey
+08/31	Independence Day (Merdeka) in Malaysia
+08/31	Independence Day in Trinidad and Tobago
+08/31	Pashtunistan Day in Afghanistan
+08/MonLast	Araw ng mga Bayani (National Heroes' Day) in the Philippines
+09/01	Army Day in Chile
+09/03	Independence Day in Qatar
+09/03	Memorial Day in Tunisia
+09/06	Defense of Pakistan Day in Pakistan
+09/06	Unification of Bulgaria
+09/07	Independence Day in Brazil
+09/09	Anniversary of the Socialist Revolution (2 days) in Bulgaria
+09/09	California Admission Day, 1850
+09/09	National Day in North Korea
+09/09	Chrysanthemum Festival (菊の節句) in Japan
+09/10	Korean Thanksgiving Day (Chusuk) in South Korea
+09/10	National Day in Belize
+09/11	Anniversary of military coup in Chile
+09/11	Ethiopian New Year in Ethiopia
+09/11	National Holiday in Chile
+09/12	Amilcar Cabral's Birthday in Guinea-Bissau
+09/12	Defenders Day in Maryland
+09/12	Revolution Day in Ethiopia
+09/13	Barry Day commemorates the death of Commodore John Barry, USA
+09/14	Battle of San Jacinto in Nicaragua
+09/15	Foundation of Panama in Panama
+09/16	Cherokee Strip Day in Oklahoma
+09/16	Independence Day in Mexico, Papua New Guinea
+09/17	National Heroes Day in Angola
+09/18	Independence Day in Chile, Zimbabwe
+09/19	Army Day in Chile
+09/21	Independence Day in Belize
+09/22	Independence Day in Mali
+09/22	National Sovereignty Day in Haiti
+09/23	Grito de Lares in Puerto Rico
+09/24	Anniversary of the Third Republic in Ghana
+09/24	Independence Day in Guinea-Bissau
+09/24	National Day in Saudi Arabia
+09/24	Our Lady of Mercedes in Dominican Republic
+09/24	Republic Day in Trinidad and Tobago
+09/25	Army Day in Mozambique
+09/25	Referendum Day in Rwanda
+09/26	National Day in Maldives
+09/26	Revolution Anniversary Day in Yemen
+09/27	Feast of Finding the True Cross in Ethiopia
+09/28	Confucius' Day in Taiwan
+09/29	Battle of Boqueron in Paraguay
+09/29	Michaelmas
+09/30	Botswana Day in Botswana
+Sep 30	Queen's Birthday in Western Australia
+09/MonFirst	Labor Day in USA
+09/MonThird	Respect for the Aged Day (敬老の日) in Japan
+Sep/MonLast	Family and Community Day in Australia
+09/SunSecond	Grandparent's Day in USA (varies from state to state)
+10/01	Armed Forces Day in South Korea
+10/01	Independence Day in Nigeria
+Oct/MonFirst	Labour Day in NSW, South Australia and the ACT
+10/01	National Liberation Day (2 days) in China
+10/01	Public Holiday in Botswana
+10/02	Anniversary of Guinean Independence in Guinea
+10/03	Chung Yeung Festival in Hong Kong
+10/03	Francisco Morazan's Birthday in Honduras
+10/03	German Unity Day
+10/03	National Foundation Day in South Korea
+10/03	U.N. Day in Barbados
+10/04	Independence Day in Lesotho
+10/05	Anniversary of Proclamation of the Republic in Portugal
+10/06	National Sports Day in Lesotho
+10/MonThird	National Heroes Day in Jamaica
+10/08	Battle of Agamos in Peru
+10/08	Constitution Day in former USSR
+10/09	Independence Day in Uganda
+10/09	Independence of Guayaquil in Ecuador
+10/09	Korean Alphabet Day in South Korea
+10/09	Leif Erikson Day commemorates the discovery of North America in AD 1000
+10/09	Republic Day in Khmer Republic
+10/10	Fiji Day
+10/10	National Day in Taiwan
+10/10	Oklahoma Historical Day in Oklahoma
+10/11	Day of the Revolution in Panama
+10/12	Day of the Race in Argentina
+10/12	National Day in Equatorial Guinea, Spain
+10/12	Our Lady Aparecida Day in Brazil
+10/12	Pan American Day in Belize
+10/13	King Bhumibol's Memorial Day in Thailand
+10/13	St. Edward's Day - Patron saint of England
+10/14	National Day in Yemen Arab Republic
+10/14	Young People's Day in Zaire
+10/15	Evacuation Day in Tunisia
+10/16	National Boss Day in USA
+10/17	Dessaline's Death Anniversary in Haiti
+10/17	Mother's Day in Malawi
+10/20	Anniversary of the 1944 Revolution in Guatemala
+10/20	Kenyatta Day in Kenya
+10/21	Armed Forces Day in Honduras
+10/21	Revolution Days (2 days) in Somalia
+10/23	King Chulalongkorn Day in Thailand
+10/24	Independence Day in Zambia
+10/24	United Nations Day
+10/25	Taiwan Restoration Day in Taiwan
+10/25	St. Crispin's day, patron saint of shoemakers
+10/26	Agam Day in Nauru
+10/26	Armed Forces Day in Benin, Rwanda
+10/26	National Day in Austria
+10/28	National Holiday in Greece
+10/28	OHI Day in Cyprus
+10/MonLast	Bank Holiday in Republic of Ireland
+10/29	Republic Day in Turkey
+10/31	All Hallows' Eve ("Halloween")
+10/31	Nevada Day in Nevada
+10/MonFourth	Labour Day in New Zealand
+10/MonSecond	Sports Day (スポーツの日) in Japan
+11/01	All Saints Day
+11/01	Samhain; Beginning of the Celtic year and most important holiday
+11/02	All Souls Day
+11/02	Memorial Day in Ecuador
+11/03	Culture Day (文化の日) in Japan
+11/03	Independence from Columbia in Panama
+11/03	Independence of Cuenca in Ecuador
+11/03	Thanksgiving Day in Liberia
+11/04	Flag Day in Panama
+11/04	Will Rogers Day in USA
+11/05	Guy Fawkes Night in England
+11/06	Green March Day in Morocco
+11/07	October Revolution Day in Hungary
+11/07	Anniversary of Great October Revolution in Bulgaria
+11/10	King's Birthday in Bhutan
+11/11	Angola gains independence from Portugal, 1975
+11/11	Independence Day in Angola
+11/11	Independence of Cartagena in Colombia
+11/11	National Independence Day in Poland
+11/SunSecond	Remembrance Sunday in UK
+11/11	Republic Day in Maldives
+11/11	Veterans' Day in USA
+11/14	King Hussein's Birthday in Jordan
+11/15	Dynasty Day in Belgium
+11/15	Proclamation of the Republic in Brazil
+11/15	Thatlouang Festival in Laos
+11/16	Oklahoma Heritage Week in Oklahoma
+11/17	Army Day in Zaire
+11/17	Corrective Movement in Syrian Arab Republic
+11/18	Battle of Viertieres in Haiti
+11/18	Independence Day in Morocco
+11/18	National Days (4 days) in Oman
+11/19	Anniversary of the 1968 Coup by the Army in Mali
+11/19	Discovery Day in Puerto Rico
+11/19	Feast Day of S.A.S. Prince Rainier in Monaco
+11/19	Garifuna Settlement in Belize
+11/20	Revolution Day in Mexico
+11/Wed+3	Day of Prayer and Repentance (Buss- und Bettag) in Federal Republic of Germany
+11/22	Anniversary of Portuguese Aggression in Guinea
+11/22	Independence Day in Lebanon
+11/23	Labor Thanksgiving Day (勤労感謝の日) in Japan
+11/24	Anniversary of the New Regime in Zaire
+11/25	Independence Day in Suriname
+11/28	Independence Day in Albania, Mauritania
+11/28	Independence from Spain in Panama
+11/28	Proclamation of the Republic in Chad
+11/29	Day of the Republic (2 days) in Yugoslavia
+11/29	Goodwill Day in Liberia
+11/29	Liberation Day in Albania
+11/29	National Day in Burma
+11/30	Independence Day in Barbados and Yemen Democratic Republic
+11/30	National Day in Benin
+11/30	St. Andrew's Day, patron saint of Scotland
+11/ThuFourth	Thanksgiving Day in USA
+11/TueFirst	Melbourne Cup in Australia
+Nov/MonFirst	Recreation Day in Tasmania
+12/01	Anniversary of the Restoration of Independence in Portugal
+12/01	Union Day in Romania
+12/01	Independence Day in Central African Republic
+12/01	World AIDS Day
+12/02	National Holiday in United Arab Emirates
+12/03	National Holiday in Laos
+12/05	King Bhumibol's Birthday, National Day and Father's Day in Thailand
+12/06	Independence Day in Finland
+12/06	Founding of Quito in Ecuador
+12/07	Delaware Day in Delaware
+12/07	Independence Day in Ivory Coast, Panama
+12/08	Blessing of the Water in Uruguay
+12/08	Mother's Day in Panama
+12/08	Our Lady of the Cacupe in Paraguay
+12/09	Independence Day in Tanzania
+12/10	Foundation of Worker's Party in Angola
+12/10	Human Rights Day
+12/10	Thai Constitution Day in Thailand
+12/10	Wyoming Day in Wyoming
+12/11	Independence Day in Upper Volta
+12/12	Independence Day in Kenya
+12/13	Republic Day in Malta
+12/15	Kingdom Day in the Netherlands
+12/16	Constitution Day in Nepal
+12/16	National Day in Bahrain
+12/16	Victory Day in Bangladesh
+12/17	National Day in Bhutan
+12/18	Republic Day in Niger
+12/23	Emperor's Birthday in Japan
+12/23	Victory Day in Egypt
+12/25	Birthday of Quaid-i-Azam in Pakistan
+12/25	Children's Day in Republic of Congo
+12/26	Boxing Day
+12/26	Feast of Our Theotokos in Greece
+12/26	Independence and Unity Day in Slovenia
+12/26	St. Stephen's Day
+Dec 26	Proclamation Day in South Australia
+12/27	Bank Holiday in Cayman Islands
+12/27	Constitution Day in North Korea
+12/27	Public Holiday in Lesotho, Zimbabwe
+12/29	Civic Holidays (3 days) in Costa Rica
+12/30	Anniversary of the Democratic Republic of Madagascar
+12/31	Bank Holiday in El Salvador, Honduras, Pakistan
+12/31	Feed Yourself Day in Benin
+12/31	Proclamation of the Republic in Congo
+12/31	Hogmanay in Scotland
+
+// https://en.wikipedia.org/wiki/Arbor_Day
+01/15	Arbor Day in Egypt
+01/15	Arbor Day in Jordan
+03/02	Tree Planting Day in North Korea
+03/05*	National Tree Planting Day in Iran
+03/12	Arbor Day in China
+03/12	Tree Day in North Macedonia
+03/21	Arbor Day in Portugal
+03/21*	International Day of Treeplanting in Flanders, Belgium
+03/21*	Tree Planting Day in Lesotho
+03/24	National Tree Planting Day in Uganda
+03/WedThird	National Festival of Trees in the Netherlands
+04/01	National Tree Planting Day in Tanzania
+04/05	Arbor Day in South Korea
+04/21	National Tree Planting Day in Kenya
+04/22	Arbor Day in Nebraska & Delaware
+04/25	Tag des Baumes (Arbor Day) in Germany
+04/29	Arbor Day in Saudi Arabia
+04/MonLast	National Arbor Day in USA
+05/SatSecond	National Tree Planting Day in Mongolia (also in October)
+06/05	Arbor Day in New Zealand
+06/25	Arbor Day in the Philippines
+06/28	Dia del Arbol in Chile
+07/09	Arbor Day in Cambodia
+07/22	National Tree Planting Day in Central African Republic
+07/ThuSecond	Día del Árbol in Mexico
+07/FriLast	National Schools Tree Day in Australia
+07/SunLast	National Tree Day in Australia
+08/03	Arbor Day in Niger
+08/18	National Tree Planting Day in Pakistan
+09/01	Arbor Week begins in South Africa
+09/21	Dia da Árvore in Brazil
+10/10	Arbor Day in Poland
+10/20	Arbor Day in the Czech Republic
+10/FriSecond	Arbor Day in Namibia
+10/SatSecond	National Tree Planting Day in Mongolia (also in May)
+11/06	National Tree Planting Day in Republic of Congo
+11/15	National Tree Planting Day in Sri Lanka
+11/22	Arbour Day in British Virgin Islands
+11/FriFirst	Arbor Day in Samoa
+11/SatSecond	National Tree Planting Day in Luxembourg
+12/MonSecond	National Tree Planting Day in Malawi
+
+// https://en.wikipedia.org/wiki/Martyrs%27_Day
+01/20	Martyrs' Day in Azerbaijan
+01/30	Martyr's Day in India
+01/30	Martyrs' Day in Nepal
+03/03	Martyrs' Day in Malawi
+03/18	Martyrs' Day in Turkey
+03/29	Martyrs' Day in Madagascar
+04/24	Martyrs' Day in Armenia
+04/30	Youm-e-Shuhada (Martyrs' Day) in Pakistan
+05/06	Martyrs' Day in Lebanon, Syria
+06/03	Martyrs' Day in Uganda
+06/20	Martyrs' Day in Eritrea
+06/21	Pya-Hodo Martyrs' Day in Togo
+07/27	Memorial Day for War Martyrs in Vietnam
+07/30	Martyr's Day in South Sudan
+09/08	Martyrs' Day in Afghanistan
+09/16	Martyrs' Day in Libya
+09/30	Martyrs' Day in China
+10/31	Martyrs' Day in Burkina Faso
+12/14	Martyred Intellectuals Day in Bangladesh
+
+// https://en.wikipedia.org/wiki/Heroes%27_Day
+01/20	Heroes Day in Cape Verde
+01/MonFourth	National Heroes Day in the Cayman Islands
+02/01	National Heroes Day in Rwanda
+02/03	Heroes' Day in Mozambique
+03/01	Heroes' Day in Paraguay
+03/25	Bengali Genocide Remembrance Day in Bangladesh
+04/28	National Heroes' Day in Barbados
+05/04	Dodenherdenking (Remembrance of the Dead) in the Netherlands
+05/31	Hősök napja (National Heroes Day) in Hungary
+05/MonLast	National Heroes' Day in Turks and Caicos Islands
+06/09	Heroes' Day in Uganda
+06/MonThird	National Heroes' Day in Bermuda
+07/31	Warriors' Day in Malaysia
+08/26	Heroes' Day in Namibia
+09/16	National Heroes Day in Saint Kitts and Nevis
+10/12	National Heroes Day in Bahamas
+10/20	Mashujaa Day (Heroes' Day) in Kenya
+11/10	Hari Pahlawan (Heroes' Day) in Indonesia
+12/31	National Heroes Day in East Timor
+Paskha+40	Heroes' Day in Romania
+
+// https://en.wikipedia.org/wiki/Constitution_Day
+02/02	Araw ng Saligang Batas (Constitution Day) in the Philippines
+02/03	Dia dos Mártires da Liberdade in São Tomé and Príncipe
+02/15	Dan državnosti (Constitution Day) in Serbia
+02/21	Language Movement Day in Bangladesh
+03/14	Constitution Day in Andorra
+03/15	Constitution Day in Belarus
+03/26	Democracy Day in Mali
+05/03	Constitution Day in Poland
+06/06	National Day in Sweden
+08/04	Constitution Day in the Cook Islands
+09/01	Constitution Day in Slovakia
+09/17	Constitution Day in USA
+11/26	National Law Day in India
+11/30	Commemoration Day in United Arab Emirates
+12/06	Día de la Constitución Española (Constitution Day) in Spain
+
+// https://en.wikipedia.org/wiki/Unity_Day
+01/22	Day of Unity of Ukraine
+02/05	Unity Day in Burundi
+04/09	National Unity Day in Georgia
+05/01	Kazakhstan People's Unity Day
+05/22	Unity Day in Yemen
+06/04	National Unity Day in Hungary
+06/27	Unity Day in Tajikistan
+07/TueFirst	Unity Day in Zambia
+09/06	Unification Day in Bulgaria
+09/17	National Unity Day in Belarus
+10/03	German Unity Day
+10/31	National Unity Day in India
+11/04	Unity Day in Russia
+11/29	Unity Day in Vanuatu
+12/01	Great Union Day in Romania
+12/22	Unity Day in Zimbabwe
+
+// https://en.wikipedia.org/wiki/Victory_Day
+03/19	Vijay Diwas in India
+04/28	Mujahideen Victory Day in Afghanistan
+04/30	Victory Day of Algeria
+05/08	Lusaka Accord Day in Mozambique
+05/08	Day of Remembrance and Victory over Nazism in World War II 1939-1945
+	in Ukraine
+05/09	Day of Victory in the Great Fatherland Liberation War in North Korea
+06/23	Võidupüha (Victory Day) in Estonia
+07/27	Kargil Vijay Diwas in India
+08/05	Victory Day in Armenia
+08/05	Dan pobjede i domovinske zahvalnosti (Victory and Homeland
+	Thanksgiving Day) in Croatia
+09/07	Reunification Day in Vietnam
+09/08	Victory Day in Malta
+11/08	Remembrance Day in Sri Lanka
+12/16	Victory Day in Azerbaijan
+12/16	Vijay Dibas in Bangladesh
+
+// from debian/patches/calendars.diff, with modifications
+May 08	Deň víťazstva nad fašizmom (Day of Victory over Fascism) in Slovakia
+May 25	International Towel Day, in honour of Douglas N. Adams
+May 30	Dan državnosti (Statehood Day) in Croatia
+Jun 02	Festa della Repubblica in Italy
+Jun 22	Dan antifašističke borbe (Anti-Fascist Struggle Day) in Croatia
+Mar 21	Human Rights Day in South Africa
+Apr 27	Freedom Day in South Africa
+May 01	Workers' Day in South Africa
+Jun 16	Youth Day in South Africa
+Aug 09	National Women's Day in South Africa
+Sep 24	Heritage Day in South Africa
+Dec 16	Day of Reconciliation in South Africa
+Dec 26	Day of Goodwill in South Africa
+
+#endif /* !_calendar_holiday_ */

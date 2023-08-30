@@ -1,0 +1,223 @@
+/* vim:ft=calendar
+ *
+ * History of space exploration
+ * Maintained by ZGM
+ *
+ * Incorporates OpenBSD's calendar.space
+ * with additional dates from Wikipedia
+ */
+
+#ifndef _calendar_space_
+#define _calendar_space_
+
+LANG=utf-8
+
+01/06	Luna 1 is the first human-made object to leave Earth orbit, 1959
+09/13	Luna 2 is the first spacecraft to reach the surface of the Moon, 1959
+10/07	Luna 3 takes the first photos of the far side of the Moon, 1959
+
+// https://en.wikipedia.org/wiki/List_of_Apollo_missions
+12/21	Apollo 8 (first circumlunar flight) launched, 1968
+12/27	Apollo 8 splashed down, 1968
+07/16	Apollo 11 (first crewed moon landing) launched, 1969
+07/20	Apollo 11 landed on moon, 1969
+07/24	Apollo 11 splashed down, 1969
+11/14	Apollo 12 launched, 1969
+11/19	Apollo 12 landed on moon, 1969
+11/24	Apollo 12 splashed down, 1969
+04/11	Apollo 13 launched, 1970
+04/13	Apollo 13 aborts moon landing due to oxygen tank explosion, 1970
+04/17	Apollo 13 splashed down safely, 1970
+01/31	Apollo 14 launched, 1971
+02/05	Apollo 14 landed on moon, 1971
+02/09	Apollo 14 splashed down, 1971
+07/26	Apollo 15 launched, 1971
+07/30	Apollo 15 landed on moon, 1971
+08/07	Apollo 15 splashed down, 1971
+04/16	Apollo 16 launched, 1972
+04/21	Apollo 16 landed on moon, 1972
+04/27	Apollo 16 splashed down, 1972
+12/07	Apollo 17 launched, 1972
+12/11	Apollo 17 landed on moon, 1972
+12/19	Apollo 17 splashed down, 1972
+
+// https://en.wikipedia.org/wiki/Mariner_program
+12/14	Mariner 2 completed first flyby of Venus, 1962
+07/15	Mariner 4 completed first flyby of Mars, 1965
+10/19	Mariner 5 made closest approach to Venus, 1967
+07/31	Mariner 6 made closest approach to Mars, 1969
+08/05	Mariner 7 made closest approach to Mars, 1969
+11/14	Mariner 9 is the first spacecraft to orbit another planet (Mars), 1971
+02/05	Mariner 10 made closest approach to Venus, 1974
+03/29	Mariner 10 completed first flyby of Mercury, 1974
+09/21	Mariner 10 completed second flyby of Mercury, 1974
+03/16	Mariner 10 completed third and final Mercury flyby, 1975
+// 07/22	Mariner 1 probe destroyed 5 minutes after liftoff, 1962
+// 11/05	Mariner 3 permanently lost power only 8 hours after launch, 1964
+// 05/09	Mariner 8 fails to launch and crashes into the ocean, 1971
+
+// https://en.wikipedia.org/wiki/Ranger_program
+07/31	Ranger 7 sent first close images of the Moon's surface, 1964
+02/20	Ranger 8 sent 7,137 close images of the Moon's surface, 1965
+03/24	Ranger 9 sent 5,814 close images of the Moon's surface, 1965
+
+// https://en.wikipedia.org/wiki/Pioneer_6,_7,_8,_and_9
+12/16	Pioneer 6 launched into solar orbit, 1965
+08/17	Pioneer 7 launched into solar orbit, 1966
+12/13	Pioneer 8 launched into solar orbit, 1967
+11/08	Pioneer 9 launched into solar orbit, 1968
+
+// https://en.wikipedia.org/wiki/Pioneer_10
+03/03	Pioneer 10 launched, 1972
+11/06	Pioneer 10 began photography of Jupiter, 1973
+12/03	Pioneer 10 made closest approach to Jupiter, 1973
+06/13	Pioneer 10 flies past Neptune's orbit, and becomes the first human
+	artifact to travel beyond the orbits of all known planets, 1983
+01/23	Pioneer 10 loses radio contact 12 billion kilometres from Earth, 2003
+// https://en.wikipedia.org/wiki/Pioneer_11
+04/05	Pioneer 11 launched, 1973
+12/04	Pioneer 11 made closest approach to Jupiter, 1974
+09/01	Pioneer 11 made closest approach to Saturn, 1979
+11/24	Last good data received from Pioneer 11, 1995
+
+// https://en.wikipedia.org/wiki/Viking_program
+07/20	Viking 1 completed the first successful Mars landing in history, 1976
+09/03	Viking 2 lands on Mars, 1976
+
+// https://en.wikipedia.org/wiki/Voyager_program
+08/20	Voyager 2 launched, 1977
+09/05	Voyager 1 launched, 1977
+03/05	Voyager 1 made closest approach to Jupiter, 1979
+07/09	Voyager 2 made closest approach to Jupiter, 1979
+11/12	Voyager 1 made closest approach to Saturn, 1980
+08/26	Voyager 2 made closest approach to Jupiter, 1981
+01/24	Voyager 2 made closest approach to Uranus, 1986
+08/25	Voyager 2 made closest approach to Neptune, 1989
+02/17	Voyager 1 overtakes Pioneer 10 as farthest from the Sun, 1998
+08/25	Voyager 1 entered interstellar space, 2012
+11/05	Voyager 2 entered interstellar space, 2019
+07/18	Voyager 2 overtook Pioneer 10 as the 2nd-farthest from the Sun, 2023
+
+// https://en.wikipedia.org/wiki/Magellan_(spacecraft)
+05/05	Magellan space probe launched from Space Shuttle Atlantis, 1989
+08/10	Magellan space probe entered Venus orbit, 1990
+10/13	Magellan space probe deorbited into Venus's atmosphere, 1994
+// https://en.wikipedia.org/wiki/Galileo_(spacecraft)
+10/18	Space probe Galileo launched from Space Shuttle Atlantis, 1989
+12/07	Space probe Galileo is the first craft to orbit an outer planet
+	(Jupiter), 1995
+// https://en.wikipedia.org/wiki/Juno_(spacecraft)
+08/05	Space probe Juno launched, 2011
+07/05	Space probe Juno entered Jupiter orbit, 2016
+
+// https://en.wikipedia.org/wiki/Cassini-Huygens
+10/15	Cassini-Huygens launched, 1997
+12/30	Cassini made flyby of Jupiter, 2000
+02/27	First high-resolution picture of Saturn taken by Cassini released, 2004
+05/20	First high-resolution picture of Titan taken by Cassini released, 2004
+06/11	Cassini made flyby of Saturn's moon Phoebe, 2004
+07/01	Cassini entered Saturn orbit, 2004
+10/27	Cassini made first close flyby of Titan, 2004
+01/14	Huygens completed first landing ever in the outer Solar System
+	and the first landing on a moon (Titan) other than Earth's, 2005
+02/17	Cassini made first flyby of Enceladus, 2005
+09/26	Cassini made first flyby of Hyperion, 2005
+09/10	Cassini made flyby of Iapetus, 2007
+07/26	NASA confirms presence of hydrocarbon lakes at Titan's north pole, 2006
+05/28	Cassini completed 43rd and final Titan flyby of primary mission, 2008
+09/15	"Grand Finale" of Cassini mission, a controlled fall into Saturn, 2017
+
+// https://en.wikipedia.org/wiki/MESSENGER
+08/03	Mercury probe MESSENGER launched, 2004
+03/18	MESSENGER is the first spacecraft to orbit Mercury, 2011
+03/06	MESSENGER completed mapping 100% of Mercury's surface, 2013
+04/30	MESSENGER probe deorbited into the surface of Mercury, 2015
+
+// https://en.wikipedia.org/wiki/New_Horizons
+01/19	New Horizons space probe launched, 2006
+02/28	New Horizons makes closest approach to Jupiter, 2007
+07/14	New Horizons makes closest approach to Pluto-Charon, 2015
+
+// https://en.wikipedia.org/wiki/Mars_Pathfinder
+12/04	Mars Pathfinder launched, 1996
+07/04	Pathfinder lands on Mars, 1997
+09/27	Last contact with Mars Pathfinder, 1997
+// https://en.wikipedia.org/wiki/Spirit_(rover)
+06/10	Mars rover Spirit launched, 2003
+01/04	Spirit rover lands on Mars, 2004
+03/22	Last contact with Mars rover Spirit, 2010
+// https://en.wikipedia.org/wiki/Opportunity_(rover)
+07/08	Mars rover Opportunity launched, 2003
+01/25	Opportunity rover lands on Mars, 2004
+06/10	Last contact with Mars rover Opportunity, 2018
+// https://en.wikipedia.org/wiki/Curiosity_(rover)
+11/26	Mars rover Curiosity launched, 2011
+08/06	Curiosity rover lands on Mars, 2012
+// https://en.wikipedia.org/wiki/Perseverance_(rover)
+07/30	Mars rover Perseverance launched, 2020
+02/18	Perseverance rover lands on Mars, 2021
+04/19	Ingenuity makes first powered flight on another planet (Mars), 2021
+
+// telescopes etc.
+04/24	Hubble Space Telescope launched, 1990
+04/05	Compton Gamma Ray Observatory launched from Space Shuttle Atlantis, 1991
+06/04	Compton Gamma Ray Observatory deorbited, 2000
+07/23	Chandra X-ray Observatory launched from Space Shuttle Columbia, 1999
+08/25	Spitzer Space Telescope launched, 2003
+01/30	Spitzer Space Telescope deactivated, 2020
+12/25	James Webb Space Telescope launched, 2021
+07/11	First photos from James Webb Space Telescope released, 2022
+
+01/03	Cháng'é 4 makes the first soft landing on lunar far side, 2019
+08/23	Chandrayaan-3 makes the first landing near the lunar south pole, 2023
+
+// ----------------------------------------------------------------------------
+// from OpenBSD
+// ----------------------------------------------------------------------------
+
+01/02	Soviet rocket carrying Lunokhod-1 leaves the Earth's orbit
+	the first time ever (though did not reach the moon), 1959
+01/04	Quadrantid meteor shower (look north)
+01/31	"Ham" the chimpanzee soars into space aboard Mercury-Redstone 2, 1961
+01/31	Explorer I launched, 1958.  Van Allen Belt discovered
+02/18	Pluto discovered by Clyde Tombaugh, Lowell Observatory, AZ, 1930
+02/20	John Glenn orbits the Earth 3 times, 1962
+03/03	Gemini III launched with Virgil Grissom and John Young on board, 1965
+03/16	Robert Goddard launches first liquid-fueled rocket, Auburn MA, 1926
+03/17	Vanguard I launched, 1958.  Earth proved pear-shaped
+03/18	Aleksei Leonov performs first spacewalk, 1965
+03/23	Mir station Flares Farewell after 15 years of service, 2001
+03/28	First reaction thrust motor demonstration, 1883
+03/30	Five rings around Uranus discovered, 1977
+04/12	Yuri Gagarin becomes the first man in space, 1961
+04/12	Space Shuttle Columbia launched, 1981
+// 04/13	Apollo 13 aborts moon landing due to oxygen tank explosion, 1970
+04/21	Lyrid meteor shower
+05/05	Alan Shepard becomes the first American in space, 1961
+05/14	Skylab (first U.S. space station) launched, 1973
+06/03	Edward White becomes the first American to perform a "Space Walk", 1965
+// 06/13	Pioneer 10 flies past Neptune's orbit, and becomes the first human
+// 	artifact to travel beyond the orbits of all known planets, 1983
+07/11	Skylab enters Earth's atmosphere and is destroyed, 1979
+// 07/04	NASA's Pathfinder lands on Mars, 1997
+// 07/20	Neil Armstrong and Edwin "Buzz" Aldrin land on moon, 1969
+08/03	First ICBM (P-7) test (5T of iron is launched to Kamchatka), 1957
+08/11	Perseid meteor shower (look north; three days)
+08/12	First test flight of Space Shuttle "Enterprise" from 747, 1977
+08/19	Air Force cargo plane snares payload from Discoverer 14 spy satellite,
+	marking start of practical military reconnaissance from space, 1960
+08/25	First reaction thrust motor design, 1898
+08/29	Star in Cygnus goes nova and becomes 4th brightest in sky, 1975;
+	Nova Cygni 1975.
+10/01	NASA officially begins operations, 1958
+10/04	First space vehicle, Sputnik I, launched, 1957
+10/10	Mercury at Superior Conjunction with Sun.  Moves into night sky. (1984)
+10/18	Soviets announce their probe took photos of the Moon's far side, 1959
+11/03	Sputnik II launched, 1957, bearing space dog Laika
+11/15	Space Shuttle Buran launched, 1988
+12/13	Apollo 17 leaves the moon, with "last" men to walk on moon aboard, 1972
+12/13	Geminid meteor shower (look south)
+12/24	Apollo 8 first manned lunar orbit, 1968
+12/30	Edwin Hubble announces the existence of other galaxies, 1924
+
+#endif /* !_calendar_space_ */

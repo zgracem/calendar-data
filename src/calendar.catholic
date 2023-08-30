@@ -1,0 +1,104 @@
+/* vim:ft=calendar
+ *
+ * Roman Catholic holy days
+ * Maintained by ZGM
+ *
+ * Mostly derived from <https://en.wikipedia.org/wiki/General_Roman_Calendar>
+ */
+
+#ifndef _calendar_catholic_
+#define _calendar_catholic_
+
+LANG=utf-8
+
+#include <calendar.catholiclite>
+#include <calendar.catholicmore>
+
+01/01	Solemnity of Mary, Mother of God
+01/03	Feast of the Holy Name of Jesus
+01/25	Feast of the Conversion of St. Paul
+02/01	Feast of St. Brigid of Kildare
+02/02	Feast of Presentation of the Lord
+02/14	Saints Cyril and Methodius Day
+02/22	Feast of the Chair of St. Peter
+03/01	St. David's Day in Wales
+03/10	Feast of St. John Ogilvie in Scotland
+03/19	St. Joseph's Day
+04/23	Feast of St. George in England
+04/25	Feast of St. Mark the Evangelist
+04/26	Feast of St. Isidore of Seville in Spain
+04/26	Feast of St. Mark in Australia and New Zealand
+04/27	Feast of St. Asicus in Ireland
+04/27	Feast of St. Turibius of Mogrovejo
+04/28	Feast of St. Peter Chanel in New Zealand
+04/29	Feast of St. Catherine of Siena
+05/01	Feast of St. Joseph the Worker
+05/01	Feast of Our Lady of Lebanon
+05/03	Feast of the Exaltation of the Holy Cross in Chile
+05/03	Feast of Saints Philip and James
+05/04	Feast of the English Martyrs
+05/08	Feast of Our Lady of Luján, Patroness of Argentina
+05/09	Feast of St. George Preca in Malta
+05/13	Feast of Our Lady of Fátima in Malta and Portugal
+05/14	Feast of St. Matthias the Apostle
+05/24	Feast of Our Lady, Help of Christians in Australia
+05/27	Feast of St. Augustine of Canterbury in England
+06/09	Feast of St. Columba (Colum Cille) in Ireland
+06/13	Feast of St. Anthony of Lisbon (Padua) in Portugal
+06/22	Feast of Saints John Fisher and Thomas More in England
+06/29	Solemnity of Saints Peter and Paul
+07/02	Feast of Our Lady of Madhu in Sri Lanka
+07/02	Feast of the Visitation of the Blessed Virgin Mary in Slovakia
+07/03	Feast of St. Thomas the Apostle
+07/11	Feast of St. Benedict
+07/13	Feast of Our Lady of Bistrica in Croatia
+07/13	Feast of St. Teresa of the Andes in Chile
+07/16	Feast of Our Lady of Mount Carmel
+07/23	Feast of St. Bridget
+07/25	Feast of St. James, son of Zebedee
+07/26	Feast of Saints Anne and Joachim, parents of Mary, in Canada
+08/08	Feast of St. Mary of the Cross (St. Mary MacKillop) in Australia
+08/09	Feast of St. Teresa Benedicta of the Cross (Edith Stein)
+08/10	Feast of St. Lawrence
+08/17	Feast of Our Lady of Knock in Ireland
+08/24	Feast of St. Bartholomew the Apostle
+08/30	Feast of St. Rose of Lima in Argentina and Chile
+09/03	Feast of St. Gregory the Great in England
+09/08	Feast of Our Lady of Victories in Malta
+09/14	Feast of the Triumph of the Holy Cross
+09/15	Feast of Our Lady of Sorrows, Patroness of Slovakia
+09/21	Feast of St. Matthew the Evangelist
+09/24	Feast of Our Lady of Ransom
+09/26	Feast of the Canadian Martyrs
+09/29	Feast of Saints Michael, Gabriel and Raphael, Archangels
+10/07	Feast of Our Lady of the Rosary in Malta
+10/12	Feast of Our Lady of Aparecida in Brazil
+10/12	Feast of Our Lady of the Pillar in Spain
+10/15	Feast of St. Teresa of Jesus in Spain
+10/18	Feast of St. Luke the Evangelist
+10/25	Feast of the Six Welsh Martyrs and their companions in Wales
+10/28	Feast of St. Simon and St. Jude
+11/06	All Saints of Ireland
+11/08	All Saints of Wales
+11/09	Feast of the Dedication of the Lateran basilica
+11/14	Feast of St. Nikola Tavelić in Croatia
+11/16	Feast of St. Margaret of Scotland
+11/21	Feast of the Presentation of the Blessed Virgin Mary in Greece
+11/24	Feast of Vietnamese Martyrs
+11/30	St. Andrew's Day in Scotland
+12/01	Feast of St. Eligius in Portugal
+12/12	Feast of Our Lady of Guadalupe
+12/13	Feast of St. Lucy in Malta
+12/14	Feast of St. John of the Cross in Malta
+12/26	Feast of St. Stephen, the first martyr
+12/27	Feast of St. John the Apostle
+12/28	Feast of the Holy Innocents
+12/29	Feast of St. Thomas Becket in England
+
+Easter-47	Feast of the Holy Winding Sheet of Christ
+Easter-44	Feast of the Crown of Thorns
+Easter+3	Feast of St. Gregory I in Malta
+Easter+7	Feast of Divine Mercy
+Easter+68	Feast of the Sacred Heart
+
+#endif /* !_calendar_catholic_ */

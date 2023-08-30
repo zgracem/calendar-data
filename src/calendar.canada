@@ -1,0 +1,104 @@
+/* vim:ft=calendar
+ *
+ * Canadian holidays (English)
+ * Maintained by ZGM
+ *
+ * Based on calendar.usholiday
+ * To be used w/ a modified calendar.holiday
+ */
+
+#ifndef _calendar_canada_
+#define _calendar_canada_
+
+LANG=utf-8
+
+01/01	New Year's Day
+01/11	Sir John A. Macdonald Day in Canada
+01/14	New Year's Day (Julian calendar)
+01/17	Raoul Wallenberg Day in Canada
+02/02	Groundhog Day
+02/14	St. Valentine's Day
+02/15	National Flag of Canada Day
+02/Mon+2	Family Day in British Columbia
+02/Mon+3	Family Day in Alberta, Ontario, Saskatchewan
+02/Mon+3	Islander Day in P.E.I.
+02/Mon+3	Louis Riel Day in Manitoba
+02/Mon+3	Heritage Day in Canada
+// in calendar.holiday:
+// 03/17	St. Patrick's Day
+03/20	International Francophonie Day
+03/Mon+2	Commonwealth Day
+03/Sun+2	Daylight saving time begins
+04/01	April Fool's Day
+04/06	Tartan Day in Canada
+04/09	Vimy Ridge Day in Canada
+// in calendar.holiday:
+// 04/23	Saint George's Day
+04/30	Tax Day in Canada
+04/FriLast	Arbour Week begins in Ontario
+05/Sun+1	Arbour Week ends in Ontario
+05/Sun+2	Mother's Day
+05/Fri+3	Arbour Day in P.E.I.
+05/Thu+1	Arbour Day in Calgary
+
+// last Monday preceding May 25
+2024/05/20	Journée nationale des patriotes (National Patriots' Day) in Québec
+2025/05/19	Journée nationale des patriotes (National Patriots' Day) in Québec
+2026/05/18	Journée nationale des patriotes (National Patriots' Day) in Québec
+2027/05/24	Journée nationale des patriotes (National Patriots' Day) in Québec
+2028/05/22	Journée nationale des patriotes (National Patriots' Day) in Québec
+2029/05/21	Journée nationale des patriotes (National Patriots' Day) in Québec
+2030/05/20	Journée nationale des patriotes (National Patriots' Day) in Québec
+2031/05/19	Journée nationale des patriotes (National Patriots' Day) in Québec
+2032/05/24	Journée nationale des patriotes (National Patriots' Day) in Québec
+2033/05/23	Journée nationale des patriotes (National Patriots' Day) in Québec
+2024/05/20	Victoria Day in Canada
+2025/05/19	Victoria Day in Canada
+2026/05/18	Victoria Day in Canada
+2027/05/24	Victoria Day in Canada
+2028/05/22	Victoria Day in Canada
+2029/05/21	Victoria Day in Canada
+2030/05/20	Victoria Day in Canada
+2031/05/19	Victoria Day in Canada
+2032/05/24	Victoria Day in Canada
+2033/05/23	Victoria Day in Canada
+
+06/11	William Davis Miners' Memorial Day in Nova Scotia
+06/19	Loyalist Day in Canada
+06/21	National Aboriginal Day in Canada
+06/24	Discovery Day in Newfoundland and Labrador
+06/24	Fête nationale du Québec (National Holiday of Quebec)
+06/27	Canadian Multiculturalism Day
+06/Sun+3	Father's Day
+07/01	Canada Day
+07/01	Memorial Day in Newfoundland and Labrador
+07/01	Moving Day in Québec
+07/09	Nunavut Day
+07/12	Orangemen's Day in Newfoundland and Labrador
+08/15	National Acadian Day in Canada
+08/Mon+1	Civic Holiday in Canada
+08/Mon+3	Discovery Day in Yukon
+09/Mon+1	Labour Day in Canada
+09/Wed+4	National Tree Day (Maple Leaf Day)
+10/Mon+2	Thanksgiving in Canada
+10/18	Persons Day in Canada
+// in calendar.holiday:
+// 10/31	Hallowe'en
+11/11	Armistice Day in Newfoundland and Labrador
+11/11	Remembrance Day in Canada
+11/20	Sir Wilfrid Laurier Day in Canada
+11/Sun+1	Daylight saving time ends
+12/06	Nat'l Day of Remembrance and Action on Violence Against Women in Canada
+12/24	Christmas Eve
+12/25	Christmas Day
+// in calendar.holiday:
+// 12/26	Boxing Day in Canada
+12/31	New Year's Eve
+Easter+1	Easter Monday
+
+MarEquinox	Vernal equinox
+JunSolstice	Summer solstice
+SepEquinox	Autumnal equinox
+DecSolstice	Winter solstice
+
+#endif /* !_calendar_canada_ */
