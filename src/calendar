@@ -17,11 +17,10 @@
 #include <calendar.women>
 
 /* builtin + patched */
-#include <calendar.birthday>
-#include <calendar.holiday>
+#include <calendar.zbirthday>
+#include <calendar.zholiday>
 
 /* builtin */
 #include <calendar.computer>
 #include <calendar.history>
-#include <calendar.holiday>
 #include <calendar.judaic>
