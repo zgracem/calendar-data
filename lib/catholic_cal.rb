@@ -39,15 +39,15 @@ module RelativeDate
   using self
 
   # @param wday_name [String] a weekday name from `Date::DAYNAMES`
-  # @param adverb [Symbol] `:before` or `:after`
+  # @param prep [Symbol] `:before` or `:after`
   # @param date_string [String] a string to be parsed by `Date.parse`
-  # @return [Date] the `adverb` `wday_name` from `date_string`
-  def self.parse(wday_name, adverb, date_string)
+  # @return [Date] the `wday_name` `prep` `date_string`
+  def self.parse(wday_name, prep, date_string)
     raise ArgumentError, "bad dayname: #{wday_name.inspect}" unless Date::DAYNAMES.include?(wday_name)
-    raise ArgumentError, "bad adverb: #{adverb.inspect}" unless %i[before after].include?(adverb)
+    raise ArgumentError, "bad preposition: #{prep.inspect}" unless %i[before after].include?(prep)
 
     date = Date.parse(date_string.to_s)
-    case adverb
+    case prep
     when :before
       date.prev_wday(wday_name)
     when :after
