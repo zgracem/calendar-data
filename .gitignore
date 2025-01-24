@@ -4,6 +4,10 @@ etc/
 lib/*
 !lib/catholic_cal.rb
 src/calendar
+# symlinks
+src/calendar.computer
+src/calendar.history
+src/calendar.judaic
 
 # dist
 *.zip
